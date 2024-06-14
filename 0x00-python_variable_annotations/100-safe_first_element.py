@@ -5,11 +5,10 @@ This module provides an annotated function parameter and return
 values with the appropraite types
 """
 
-from types import NoneType
 from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: Sequence[Any]) -> Union[Any, NoneType]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
     Returns the first element of the input list if it's not empy,
     Otherwise returns None.
