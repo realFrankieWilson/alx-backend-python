@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module `2-floor`
+Module `3-to_str`
 This module provides a type-annotated function that returns
 the string representation of a float
 
