@@ -15,19 +15,19 @@ Function:
 
 """
 
-from typing import List, Tuple
+from typing import List, Iterable, Sequence, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     Returns a list of tuples, where each tuple conatins the origianl
     string and its length.
 
     Args:
-        lst (List[str]): A list of strings.
+        lst (Iterable[Sequence]): An iterable of sequence.
 
     Returns:
-        List[Tuple[str, int]]: A list of tuples,
+        List[Tuple[Sequence, int]]: A list of tuples,
         where each tuple contains the original string and its length.
     """
     return [(i, len(i)) for i in lst]
