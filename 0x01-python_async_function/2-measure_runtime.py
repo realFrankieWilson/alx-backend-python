@@ -2,7 +2,8 @@
 
 """
 Module `2-measure_runtime`
-Provides a function that measures the total execution time for `wait_n(n,, max_delay)`
+Provides a function that measures the total
+execution time for `wait_n(n,, max_delay)`
 and returns the average time per call
 """
 
