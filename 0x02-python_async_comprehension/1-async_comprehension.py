@@ -7,7 +7,6 @@ using an async comprehension over async_generator, then return
 the 10 random numbers.
 """
 
-import random
 import asyncio
 from typing import List
 

@@ -6,15 +6,13 @@ Imports a coroutine `async_comprehension`, executes the imported function
 four times and measure the total runtime.
 """
 
-import random
 import time
 import asyncio
-from typing import Generator
 
 async_comprehension = __import__("1-async_comprehension").async_comprehension
 
 
-async def measure_runtime() -> Generator[None, None, None]:
+async def measure_runtime() -> float:
     """
     Coroutine that execute and measure the total runtime of
     another coroutine function.
