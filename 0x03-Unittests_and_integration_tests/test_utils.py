@@ -23,6 +23,8 @@ class TestAccessNestedMap(unittest.TestCase):
         ]
     )
     def test_access_nested_map(
-        self, nested_map: Mapping[str, Any], path: Sequence[str], expected: Any
+        self, map: Mapping[str, Any], path: Sequence[str], expected: Any
     ) -> None:
-        self.assertEqual(access_nested_map(nested_map, path), expected)
+        """Test method that returns the expected output"""
+        result = access_nested_map(map, path)
+        self.assertEqual(result, expected)
