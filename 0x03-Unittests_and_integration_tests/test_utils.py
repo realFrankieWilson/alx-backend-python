@@ -7,8 +7,7 @@ unittest.TestCase.
 """
 
 import unittest
-from parameterized import parameterized  # type: ignore
-from typing import Mapping, Sequence, Any
+from parameterized import parameterized
 from utils import access_nested_map
 
 
@@ -22,9 +21,13 @@ class TestAccessNestedMap(unittest.TestCase):
             ({"a": {"b": 2}}, ("a", "b"), 2),
         ]
     )
-    def test_access_nested_map(
-        self, map: Mapping[str, Any], path: Sequence[str], expected: Any
-    ) -> None:
+    def test_access_nested_map(self, map, path, expected):
         """Test method that returns the expected output"""
         result = access_nested_map(map, path)
         self.assertEqual(result, expected)
+
+    @parameterized.expand([({}, ("a",), "a"), ({"a": 1}, ("a", "b"), "b")])
+    def test_access_nested_map_exception(self, map, path, err_output):
+        with self.assertRaises(KeyError) as e:
+            access_nested_map(map, path)
+            self.assertEqual(err_output, e.exception)
